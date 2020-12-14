@@ -1,4 +1,4 @@
-package com.ex1;
+package com.ex1.refactoring;
 
 //고객이 영화를 대여하는 것을 나타냄
 public class Rental {
@@ -17,6 +17,12 @@ public class Rental {
 	public int getDaysRented() {
 		return _daysRented;
 	}
-	
-	
+
+	public double getCharge() {
+		return _movie.getCharge(_daysRented);
+	}
+
+	public int getFrequentRenterPoints() {
+		return _movie.getFrequentRenterPoints(_daysRented);
+	}
 }
